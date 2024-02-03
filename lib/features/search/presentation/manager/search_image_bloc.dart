@@ -32,7 +32,6 @@ class SearchImageBloc extends Bloc<SearchImageEvent, SearchImageState> {
             );
           }
         },
-        moreImagesLoaded: (_MoreImagesLoaded value) {},
       );
     });
   }

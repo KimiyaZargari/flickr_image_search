@@ -16,43 +16,42 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SearchImageEvent {
+  String get searchQuery => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String searchQuery) searchTriggered,
-    required TResult Function() moreImagesLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String searchQuery)? searchTriggered,
-    TResult? Function()? moreImagesLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String searchQuery)? searchTriggered,
-    TResult Function()? moreImagesLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_SearchTriggered value) searchTriggered,
-    required TResult Function(_MoreImagesLoaded value) moreImagesLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_SearchTriggered value)? searchTriggered,
-    TResult? Function(_MoreImagesLoaded value)? moreImagesLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_SearchTriggered value)? searchTriggered,
-    TResult Function(_MoreImagesLoaded value)? moreImagesLoaded,
     required TResult orElse(),
   }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SearchImageEventCopyWith<SearchImageEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -61,6 +60,8 @@ abstract class $SearchImageEventCopyWith<$Res> {
   factory $SearchImageEventCopyWith(
           SearchImageEvent value, $Res Function(SearchImageEvent) then) =
       _$SearchImageEventCopyWithImpl<$Res, SearchImageEvent>;
+  @useResult
+  $Res call({String searchQuery});
 }
 
 /// @nodoc
@@ -72,13 +73,28 @@ class _$SearchImageEventCopyWithImpl<$Res, $Val extends SearchImageEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? searchQuery = null,
+  }) {
+    return _then(_value.copyWith(
+      searchQuery: null == searchQuery
+          ? _value.searchQuery
+          : searchQuery // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$SearchTriggeredImplCopyWith<$Res> {
+abstract class _$$SearchTriggeredImplCopyWith<$Res>
+    implements $SearchImageEventCopyWith<$Res> {
   factory _$$SearchTriggeredImplCopyWith(_$SearchTriggeredImpl value,
           $Res Function(_$SearchTriggeredImpl) then) =
       __$$SearchTriggeredImplCopyWithImpl<$Res>;
+  @override
   @useResult
   $Res call({String searchQuery});
 }
@@ -141,7 +157,6 @@ class _$SearchTriggeredImpl implements _SearchTriggered {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String searchQuery) searchTriggered,
-    required TResult Function() moreImagesLoaded,
   }) {
     return searchTriggered(searchQuery);
   }
@@ -150,7 +165,6 @@ class _$SearchTriggeredImpl implements _SearchTriggered {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String searchQuery)? searchTriggered,
-    TResult? Function()? moreImagesLoaded,
   }) {
     return searchTriggered?.call(searchQuery);
   }
@@ -159,7 +173,6 @@ class _$SearchTriggeredImpl implements _SearchTriggered {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String searchQuery)? searchTriggered,
-    TResult Function()? moreImagesLoaded,
     required TResult orElse(),
   }) {
     if (searchTriggered != null) {
@@ -172,7 +185,6 @@ class _$SearchTriggeredImpl implements _SearchTriggered {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_SearchTriggered value) searchTriggered,
-    required TResult Function(_MoreImagesLoaded value) moreImagesLoaded,
   }) {
     return searchTriggered(this);
   }
@@ -181,7 +193,6 @@ class _$SearchTriggeredImpl implements _SearchTriggered {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_SearchTriggered value)? searchTriggered,
-    TResult? Function(_MoreImagesLoaded value)? moreImagesLoaded,
   }) {
     return searchTriggered?.call(this);
   }
@@ -190,7 +201,6 @@ class _$SearchTriggeredImpl implements _SearchTriggered {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_SearchTriggered value)? searchTriggered,
-    TResult Function(_MoreImagesLoaded value)? moreImagesLoaded,
     required TResult orElse(),
   }) {
     if (searchTriggered != null) {
@@ -204,112 +214,12 @@ abstract class _SearchTriggered implements SearchImageEvent {
   const factory _SearchTriggered(final String searchQuery) =
       _$SearchTriggeredImpl;
 
+  @override
   String get searchQuery;
+  @override
   @JsonKey(ignore: true)
   _$$SearchTriggeredImplCopyWith<_$SearchTriggeredImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$MoreImagesLoadedImplCopyWith<$Res> {
-  factory _$$MoreImagesLoadedImplCopyWith(_$MoreImagesLoadedImpl value,
-          $Res Function(_$MoreImagesLoadedImpl) then) =
-      __$$MoreImagesLoadedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$MoreImagesLoadedImplCopyWithImpl<$Res>
-    extends _$SearchImageEventCopyWithImpl<$Res, _$MoreImagesLoadedImpl>
-    implements _$$MoreImagesLoadedImplCopyWith<$Res> {
-  __$$MoreImagesLoadedImplCopyWithImpl(_$MoreImagesLoadedImpl _value,
-      $Res Function(_$MoreImagesLoadedImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$MoreImagesLoadedImpl implements _MoreImagesLoaded {
-  const _$MoreImagesLoadedImpl();
-
-  @override
-  String toString() {
-    return 'SearchImageEvent.moreImagesLoaded()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$MoreImagesLoadedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String searchQuery) searchTriggered,
-    required TResult Function() moreImagesLoaded,
-  }) {
-    return moreImagesLoaded();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String searchQuery)? searchTriggered,
-    TResult? Function()? moreImagesLoaded,
-  }) {
-    return moreImagesLoaded?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String searchQuery)? searchTriggered,
-    TResult Function()? moreImagesLoaded,
-    required TResult orElse(),
-  }) {
-    if (moreImagesLoaded != null) {
-      return moreImagesLoaded();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_SearchTriggered value) searchTriggered,
-    required TResult Function(_MoreImagesLoaded value) moreImagesLoaded,
-  }) {
-    return moreImagesLoaded(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SearchTriggered value)? searchTriggered,
-    TResult? Function(_MoreImagesLoaded value)? moreImagesLoaded,
-  }) {
-    return moreImagesLoaded?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SearchTriggered value)? searchTriggered,
-    TResult Function(_MoreImagesLoaded value)? moreImagesLoaded,
-    required TResult orElse(),
-  }) {
-    if (moreImagesLoaded != null) {
-      return moreImagesLoaded(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _MoreImagesLoaded implements SearchImageEvent {
-  const factory _MoreImagesLoaded() = _$MoreImagesLoadedImpl;
 }
 
 /// @nodoc
